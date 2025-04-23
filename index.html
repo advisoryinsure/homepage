@@ -179,6 +179,76 @@
 #backToTop:hover {
   background-color: #333;
 }
+@media screen and (max-width: 768px) {
+  /* Header adjusts for smaller viewports */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  /* Hero section text resizing */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Service card image resizing */
+  .service-card img {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  /* Coverage grid: switch to one column on mobile */
+  .coverage-section div {
+    grid-column: span 2;
+  }
+
+  .coverage-section div img {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  .coverage-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Claim section spacing */
+  .claim-button {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Contact and About text sizing */
+  .about p,
+  .contact p {
+    font-size: 1rem;
+  }
+
+  /* Claim section step images */
+  section img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
   </style>
 

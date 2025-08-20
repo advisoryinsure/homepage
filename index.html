@@ -345,17 +345,17 @@
 
   /* --- Mobile fixes for image backgrounds --- */
 @media (max-width: 768px) {
-  /* Show entire background image on phones (no cropping) */
+  /* Repeat vertically; fill width; keep aspect ratio */
   #surety-coverage,
   #motorcar,
   #fire {
-    background-size: contain !important;      /* fit entire photo */
+    background-repeat: repeat-y !important;   /* ← allow vertical tiling */
+    background-size: 100% auto !important;    /* ← span full width, natural height */
     background-position: top center !important;
-    background-repeat: no-repeat !important;
-    padding: 1.5rem 1rem !important;          /* tighter padding to reduce empty space */
+    padding: 1.5rem 1rem !important;
   }
 
-  /* Make the 2-column grids stack to 1 column on mobile */
+  /* 1-column grid on mobile */
   #surety-coverage > div,
   #motorcar > div,
   #fire > div {
@@ -363,7 +363,7 @@
     gap: 1rem !important;
   }
 
-  /* Keep icons sensible on small screens */
+  /* Sensible icon sizes */
   #surety-coverage img,
   #motorcar img,
   #fire img {
@@ -371,15 +371,13 @@
     height: auto !important;
   }
 
-  /* Ensure white text stays readable on bright photos */
+  /* Readability on bright images */
   #motorcar, #fire {
     color: #ffffff !important;
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
   }
 }
-/* Desktop/tablet default */
-#surety-coverage { background-size: cover; }
-/* Mobile override already set above */
+
 
 
   </style>
@@ -654,4 +652,3 @@ style="
 </script>
 
 </body>
-
